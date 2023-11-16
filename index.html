@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="config.js"></script>
+  </head>
+  <body>
+    <p>Greet from colab: </p>
+    <p id="greet"></p>
+  </body>
+  <script>
+    fetch(URL).then(res => res.json()).then(json => {
+      const greetDiv = document.getElementById("greet");
+      greetDiv.innerText = json.greet;
+    }) 
+  </script>
+</html>
